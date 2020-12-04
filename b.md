@@ -44,7 +44,7 @@ https://www.bilibili.com/video/BV1kt411H7p1
 
 配置ip网络
 
-```bash
+```Bash
 # master01
 hostnamectl set-hostname k8s-master01
 vim /etc/sysconfig/network-scripts/ifcfg-ens33
@@ -97,14 +97,14 @@ vim /etc/sysconfig/network-scripts/ifcfg-ens33
 
 配置镜像
 
-```bash
+```BASH
 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 ```
 
 k8s-master01上设置免密:
 
-```bash
+```shell
 yum install -y expect
 
 #分发公钥
